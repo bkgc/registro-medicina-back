@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Table, TableCell, TableContainer, TableHead, TableRow, TextField, Typography } from "@mui/material"
+import { Card, CardContent,  Table, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { toast } from "react-toastify"
@@ -26,6 +26,7 @@ const PacienteRegistro:React.FC<{id:string|string[]|undefined}>=({id})=>{
     const GetPaciente=async()=>{
         try{
             const res=await axios.get<paciente>(`${process.env.NEXT_PUBLIC_URL_API_BACKEND}paciente/${id}`)
+            console.log("DATA",res.data)
             setPaciente(res.data)
         }
         catch(error:any){
@@ -40,7 +41,24 @@ const PacienteRegistro:React.FC<{id:string|string[]|undefined}>=({id})=>{
                   <TableHead>
                     <TableRow>
                       <TableCell colSpan={12} align="center" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                        <Typography variant="h6" align="center">Hola</Typography>
+                        <Typography variant="h6" align="center">Fecha</Typography>
+                      </TableCell>
+                      <TableCell>
+                      <Typography variant="h6" align="center">Hora</Typography>
+                      </TableCell>
+                      <TableCell>
+                      <Typography variant="h6" align="center">Edad</Typography>
+                      </TableCell>
+                      <TableCell>
+                      <Typography variant="h6" align="center">Peso</Typography>
+                        
+                      </TableCell>
+                      <TableCell>
+                      <Typography variant="h6" align="center">Talla</Typography>
+                      
+                      </TableCell>
+                      <TableCell>
+                        <Typography variant="h6" align="center">I.M.C.</Typography>
                       </TableCell>
                     </TableRow>
                   </TableHead>
