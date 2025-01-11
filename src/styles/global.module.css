@@ -1,0 +1,18 @@
+.BoxShadow {
+  box-shadow: 0 15px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(0, 0, 0);
+}
+
+.TitleHead {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+.TypografyBox {
+  font-family: 'Times New Roman';
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #45ada8;
+}
